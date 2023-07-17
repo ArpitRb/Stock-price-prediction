@@ -59,6 +59,3 @@ to fit data set into LSTM model which was not the actual stock price. To get the
 actual stock price data in predicted set, we had multipliped the 1/scaled factor to the 
 predicted data set. Then, we visualized the original data vs predicted data of closing 
 price using matplotlib. 
-
-![image](https://github.com/ArpitRb/Stock-price-prediction/assets/121932552/4851e4de-11b8-48c7-93c5-4e92b2104451)
-Fig: Predicted vs Original closing price graph for APPL
