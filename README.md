@@ -1,19 +1,19 @@
 # Stock-price-prediction
 Stock price prediction using LSTM
-The development of the model to predict stock price involves 5 major steps which 
-is depicted in the flow diagram given below: 
-![image](https://github.com/ArpitRb/Stock-price-prediction/assets/121932552/201a5bf7-2aed-463e-a8c9-1d1b5b65e653)
+The development of the model to predict stock price involves 5 major steps:
 
 1) Data Collection And Preparation  
 Data was collected from the targeted website i.e. www.finance.yahoo.com. 
 Different stock price information of international companies were collected which 
 include open price, close price, maximum price, minimum price over different 
 series of years. For that, we first did web scraping using python and using streamlit 
-we describe the collected data. We chose closing price for the prediction. 
+we describe the collected data. We chose closing price for the prediction.
+ 
 2) Analyzing Using Moving Average  
 For the analysis of up trend and down trend of closing price for the analyst or any 
 user, we plotted the two different types of moving averages, one was 100 days 
-moving average and another was 200 days moving average. 
+moving average and another was 200 days moving average.
+
 3) Preparing training and test data  
 With time series data, the sequence of values is important. A simple method that we 
 can use is to split the ordered dataset into train and test data sets. For the splitting 
@@ -27,7 +27,8 @@ such as tanh or sigmoid are defined on the [-1, 1] or [0, 1] interval respective
 LSTMs are sensitive to the scale of the input data, specifically when the sigmoid 
 (default) or tanh activation functions are used. It can be a good practice to rescale 
 the data to the range of 0-to-1, also called normalizing. We easily normalized the 
-dataset using the MinMaxScaler preprocessing class from the scikit-learn library. 
+dataset using the MinMaxScaler preprocessing class from the scikit-learn library.
+ 
 5) Constructing Neural Network Model  
 After having defined the placeholders, variables, initializers, cost functions and 
 optimizers of the network, the model is trained. Usually, this was done by further 
@@ -50,8 +51,9 @@ Then the network model was saved for reuse. For the construction of neural
 network, we had used the keras library consisting of sequential model and LSTM, 
 Dropout and Dense layer. Our LSTM model was composed of a sequential input 
 layer followed by 4 LSTM layers and 4 dropout layers with relu activation and then 
-finally a dense output layer with linear activation function. 
-6) Output Visualization  
+finally a dense output layer with linear activation function.
+
+Output Visualization  
 Output from neural network was scaled due to the MinMax scaler , which was used 
 to fit data set into LSTM model which was not the actual stock price. To get the 
 actual stock price data in predicted set, we had multipliped the 1/scaled factor to the 
